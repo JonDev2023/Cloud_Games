@@ -5,6 +5,7 @@ import app
 # Input variables
 server = input('Type the server: ')
 game_name = input('Type the game Name(maiuscle and minuscle is different): ')
+otimizate = input('Otimizate? (S/N): ')
 
 # Downloading Main HTML File
 file_url = server + '/index.html'
@@ -37,6 +38,10 @@ try:
     request.urlretrieve(file_url, file)
 except OSError:
     print('Skipped')
+
+# Optimize App
+if otimizate == 'S':
+    app.optimize()
 
 # Running App
 app.node('test')

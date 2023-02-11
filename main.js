@@ -38,9 +38,6 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
   let fs = require('fs')
   // Especificamos o nome e extensão do arquivo a ser deletado
   fs.unlink('index.html', function (err) {
@@ -51,6 +48,9 @@ app.on('window-all-closed', () => {
     if (err) throw err;
     console.log('File Deleted by fs');
   })
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
 })
 
 // In this file you can include the rest of your app's specific main process

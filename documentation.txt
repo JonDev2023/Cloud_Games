@@ -1,7 +1,10 @@
 Structure -------[
     index.html # Main HTML File
     game.html # Game HTML File(Optional)
+    script.js # Fisic of Game
+    style.css # Style Color
     data_ExampleGame.json # Data JSON File
+    api.js # CG API
 ]
 
 Requirements ------[
@@ -18,6 +21,12 @@ is the game and is normal
 
 ---data_ExampleGame.json---
 is a json that have a structure
+
+---script.js---
+its normal just the fisic
+
+---style.css---
+a normal style file for your game
 
 ---Instructions---
 copy cg_api.js as api.js(if you make error try searching on Google)
@@ -47,3 +56,10 @@ firebase init
 
 ---Deploying Project---
 firebase deploy
+
+---CG API---
+LoadData()
+´´´
+api.LoadData('FileName');
+´´´
+this is to load the data
