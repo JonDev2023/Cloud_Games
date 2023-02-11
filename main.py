@@ -1,4 +1,4 @@
-import os.path
+import os
 from urllib import request
 import app
 
