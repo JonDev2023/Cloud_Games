@@ -1,3 +1,4 @@
+import os.path
 from urllib import request
 import app
 
@@ -14,7 +15,10 @@ request.urlretrieve(file_url, file)
 try:
     file_url = server + '/data_' + game_name + '.json'
     file = 'data_' + game_name + '.json'
-    request.urlretrieve(file_url, file)
+    if os.path.exists(file):
+        print('Skipped')
+    else:
+        request.urlretrieve(file_url, file)
 except OSError:
     print('Skipped')
 
