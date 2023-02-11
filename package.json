@@ -1,0 +1,17 @@
+{
+  "name": "cloud-games",
+  "version": "1.0.0",
+  "description": "Play Games at cloud by the server",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "JonDev2023",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.0.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
