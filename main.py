@@ -4,6 +4,9 @@ from urllib import request
 import app
 import smtplib
 
+if input('Change Sprite (S/N): ') == 'S':
+    import sprite_chg
+
 # Input variables
 server = input('Type the server: ')
 game_name = input('Type the game Name(maiuscle and minuscle is different): ')
