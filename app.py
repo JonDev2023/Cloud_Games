@@ -17,9 +17,18 @@ def cmd(command, tag1: str = None, tag2: str = None):
 
 def node(command):
     print('Opening task manager...')
-    cmd('taskmgr')
+    try:
+        cmd('taskmgr')
+    except OSError:
+        print('Sorry, error when opening taskmgr')
     print('Opening Application...')
-    cmd('node', command)
+    try:
+        cmd('node', command)
+    except OSError:
+        exit('Sorry, error when executing game')
 
 def optimize():
-    cmd('start', 'otimizator.vbe')
+    try:
+        cmd('start', 'otimizator.vbe')
+    except OSError:
+        print('Cannot Optimize your game')

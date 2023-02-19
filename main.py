@@ -1,6 +1,8 @@
 import os
+import random
 from urllib import request
 import app
+import smtplib
 
 # Input variables
 server = input('Type the server: ')
