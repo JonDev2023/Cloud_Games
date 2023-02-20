@@ -5,7 +5,7 @@ import app
 import smtplib
 
 if input('Change Sprite (S/N): ') == 'S':
-    import sprite_chg
+    app.cmd('mspaint', 'sprite.png')
 
 # Input variables
 server = input('Type the server: ')
@@ -35,14 +35,6 @@ try:
     request.urlretrieve(file_url, file)
 except OSError:
     print('SKipped')
-
-# Downloading API JS File
-try:
-    file_url = server + '/api.js'
-    file = 'api.js'
-    request.urlretrieve(file_url, file)
-except OSError:
-    print('Skipped')
 
 # Optimize App
 if otimizate == 'S':
