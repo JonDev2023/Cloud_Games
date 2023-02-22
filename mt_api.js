@@ -7,7 +7,7 @@ function connect_MTserver(MTserver, nickname) {
 }
 
 function send_info(str_x, str_y, ztr_z, nickname) {
-    socket.send("{'x': " + str_x + ", 'y': " + str_y + ", 'z': " + str_z + ", 'nickname': " + "nickname}");
+    socket.send("{'x': " + str_x + ", 'y': " + str_y + ", 'z': " + str_z + ", 'nickname': " + nickname + "}");
     return {'x': str_x, 'y': str_y, 'z': str_z, 'nickname': nickname};
 }
 
